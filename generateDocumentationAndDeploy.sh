@@ -72,10 +72,6 @@ echo "" > .nojekyll
 echo 'Generating Doxygen code documentation...'
 # Redirect both stderr and stdout to the log file AND the console.
 cd $(dirname $DOXYFILE)
-wget https://raw.githubusercontent.com/Aquaveo/xmscore/gh-pages/xmscore.tag
-wget https://raw.githubusercontent.com/Aquaveo/xmsextractor/gh-pages/xmsextractor.tag
-wget https://raw.githubusercontent.com/Aquaveo/xmsgrid/gh-pages/xmsgrid.tag
-wget https://raw.githubusercontent.com/Aquaveo/xmsinterp/gh-pages/xmsinterp.tag
 doxygen $DOXYFILE 2>&1 | tee doxygen.log
 
 ################################################################################
@@ -86,7 +82,7 @@ doxygen $DOXYFILE 2>&1 | tee doxygen.log
 #if [ -d "html" ] && [ -f "html/index.html" ]; then
 if [ -d "html" ] && [ -f "html/index.html" ]; then
 
-    mv xmsextractor.tag "$TRAVIS_BUILD_DIR/code_docs/$GH_REPO_NAME/"
+    mv xmdf.tag "$TRAVIS_BUILD_DIR/code_docs/$GH_REPO_NAME/"
     mv html/* "$TRAVIS_BUILD_DIR/code_docs/$GH_REPO_NAME/"
     cd $TRAVIS_BUILD_DIR/code_docs/$GH_REPO_NAME
     echo 'Uploading documentation to the gh-pages branch...'

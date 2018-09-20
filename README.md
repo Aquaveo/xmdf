@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/Aquaveo/xmsgridtrace.svg?branch=master)](https://travis-ci.org/Aquaveo/xmsgridtrace)
 [![Build status](https://ci.appveyor.com/api/projects/status/tkgmhrs31cc4l3ph?svg=true)](https://ci.appveyor.com/project/Aquaveo/xmsgridtrace)
 
-XMSGridtrace
+XMDF
 ========
-Grid point tracer for XMS products.
+Library providing a standard format for geometry and time data storage in the HDF5 format.
 
 Prerequisites
 --------------
@@ -49,4 +49,4 @@ For Windows:
 Documentation
 -------------
 
-See: [xmsgridtrace documentation](https://aquaveo.github.io/xmsgridtrace/)
+See: [xmdf documentation](https://aquaveo.github.io/xmdf/)
