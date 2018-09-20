@@ -1,17 +1,17 @@
 """
-XMSStamper Conanfile and Support
+Xmdf Conanfile and Support
 """
 import os
 from conans import ConanFile, CMake
 from conans.errors import ConanException
 
 
-class XmsstamperConan(ConanFile):
-    """XMSStamper Conanfile"""
-    name = "xmsstamper"
+class XmdfConan(ConanFile):
+    """Xmdf Conanfile"""
+    name = "xmdf"
     version = None
     license = "XMSNG Software License"
-    url = "https://github.com/Aquaveo/xmsstamper"
+    url = "https://github.com/Aquaveo/xmdf"
     description = "Grid library for XMS products"
     settings = "os", "compiler", "build_type", "arch"
     options = {
@@ -23,7 +23,7 @@ class XmsstamperConan(ConanFile):
     generators = "cmake"
     build_requires = "cxxtest/4.4@aquaveo/stable"
     exports = "CMakeLists.txt", "LICENSE", "test_files/*"
-    exports_sources = "xmsstamper/*", "test_files/*"
+    exports_sources = "xmdf/*", "test_files/*"
 
     def configure(self):
         # Set version dynamically using XMS_VERSION env variable.
@@ -100,7 +100,7 @@ class XmsstamperConan(ConanFile):
                 print("***********(0.0)*************")
 
     def package(self):
-        self.copy("*.h", dst="include/xmsstamper", src="xmsstamper")
+        self.copy("*.h", dst="include/xmdf", src="xmdf")
         self.copy("*.lib", dst="lib", keep_path=False)
         self.copy("*.pyd", dst="lib", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
@@ -111,6 +111,6 @@ class XmsstamperConan(ConanFile):
 
     def package_info(self):
         if self.settings.build_type == 'Debug':
-            self.cpp_info.libs = ["xmsstamper_d"]
+            self.cpp_info.libs = ["xmdf_d"]
         else:
-            self.cpp_info.libs = ["xmsstamper"]
+            self.cpp_info.libs = ["xmdf"]

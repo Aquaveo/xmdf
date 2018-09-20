@@ -2,15 +2,15 @@ env:
   global:
    # TRAVIS_BRANCH is tag name if tag provided else branch name
    - XMS_VERSION: $TRAVIS_BRANCH
-   - CONAN_REFERENCE: "xmsstamper/${XMS_VERSION}"
+   - CONAN_REFERENCE: "xmdf/${XMS_VERSION}"
    - CONAN_USERNAME: "aquaveo"
    - CONAN_CHANNEL: "stable"
    - CONAN_LOGIN_USERNAME: $CONAN_USER_SECRET
    - CONAN_PASSWORD: $CONAN_PASSWORD_SECRET
    - CONAN_REMOTES: $AQUAVEO_CONAN
-   - GH_REPO_NAME: xmsstamper
+   - GH_REPO_NAME: xmdf
    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxygen/Doxyfile
-   - GH_REPO_REF: github.com/Aquaveo/xmsstamper.git
+   - GH_REPO_REF: github.com/Aquaveo/xmdf.git
    - PYTHON_TARGET_VERSION: 2.7
      
 linux: &linux

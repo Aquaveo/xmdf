@@ -9,6 +9,6 @@ build_type=Debug
 [options]
 xmscore:xms=True
 xmsinterp:xms=True
-xmsstamper:testing=True
+xmdf:testing=True
 [build_requires]
 [env]

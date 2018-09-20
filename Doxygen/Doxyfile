@@ -32,7 +32,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = xmsstamper
+PROJECT_NAME           = xmdf
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -769,7 +769,7 @@ WARN_LOGFILE           = doxy_warn.log
 # Note: If this tag is empty the current directory is searched.
 
 INPUT                  = ./ \
-                         ../xmsstamper/
+                         ../xmdf/
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -865,7 +865,7 @@ EXCLUDE_SYMBOLS        =
 # that contain example code fragments that are included (see the \include
 # command).
 
-EXAMPLE_PATH           = ../xmsstamper
+EXAMPLE_PATH           = ../xmdf
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp and
@@ -2077,14 +2077,14 @@ SKIP_FUNCTION_MACROS   = YES
 # the path). If a tag file is not located in the directory in which doxygen is
 # run, you must also specify the path to the tagfile here.
 
-TAGFILES               = xmsstamper.tag=https://aquaveo.github.io/xmscore/ \
-                         xmsstamper.tag=https://aquaveo.github.io/xmsinterp/ \
+TAGFILES               = xmdf.tag=https://aquaveo.github.io/xmscore/ \
+                         xmdf.tag=https://aquaveo.github.io/xmsinterp/ \
 
 # When a file name is specified after GENERATE_TAGFILE, doxygen will create a
 # tag file that is based on the input files it reads. See section "Linking to
 # external documentation" for more information about the usage of tag files.
 
-GENERATE_TAGFILE       = xmsstamper.tag
+GENERATE_TAGFILE       = xmdf.tag
 
 # If the ALLEXTERNALS tag is set to YES, all external class will be listed in
 # the class index. If set to NO, only the inherited external classes will be

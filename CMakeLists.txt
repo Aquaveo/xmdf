@@ -16,7 +16,7 @@ set(CONDA_PREFIX "" CACHE PATH "Path to the conda environment used to build.")
 set(IS_PYTHON_BUILD NO CACHE BOOL "Set this if you want to build the python bindings.")
 set(XMSSTAMPER_TEST_PATH "../test_files/" CACHE PATH "Path to test files for testing")
 
-project(xmsstamper C CXX)
+project(xmdf C CXX)
 
 if(WIN32)
     if(XMS_BUILD)
@@ -47,48 +47,48 @@ include_directories(${EXT_INCLUDE_DIRS})
 link_directories(${EXT_LIB_DIRS})
 
 # Sources
-set(xmsstamper_sources
-	xmsstamper/stamper/XmStamper.cpp
-	xmsstamper/stamper/XmStamperIo.cpp
-	xmsstamper/stamper/TutStamping.cpp
-	xmsstamper/stamper/detail/XmBathymetryIntersector.cpp
-	xmsstamper/stamper/detail/XmBreaklines.cpp
-	xmsstamper/stamper/detail/XmGuideBankUtil.cpp
-	xmsstamper/stamper/detail/XmSlopedAbutmentUtil.cpp
-	xmsstamper/stamper/detail/XmStampEndCap.cpp
-	xmsstamper/stamper/detail/XmStampInterpCrossSection.cpp
-	xmsstamper/stamper/detail/XmStampTests.cpp
-	xmsstamper/stamper/detail/XmUtil.cpp
+set(xmdf_sources
+	xmdf/xmdf/XmXmdf.cpp
+	xmdf/xmdf/XmXmdfIo.cpp
+	xmdf/xmdf/TutStamping.cpp
+	xmdf/xmdf/detail/XmBathymetryIntersector.cpp
+	xmdf/xmdf/detail/XmBreaklines.cpp
+	xmdf/xmdf/detail/XmGuideBankUtil.cpp
+	xmdf/xmdf/detail/XmSlopedAbutmentUtil.cpp
+	xmdf/xmdf/detail/XmStampEndCap.cpp
+	xmdf/xmdf/detail/XmStampInterpCrossSection.cpp
+	xmdf/xmdf/detail/XmStampTests.cpp
+	xmdf/xmdf/detail/XmUtil.cpp
 )
 
-set(xmsstamper_headers
-  xmsstamper/stamper/XmStamper.h
-  xmsstamper/stamper/XmStamperIo.h
-  xmsstamper/stamper/TutStamping.t.h
-  xmsstamper/stamper/detail/XmBathymetryIntersector.h
-  xmsstamper/stamper/detail/XmBathymetryIntersector.t.h
-  xmsstamper/stamper/detail/XmBreaklines.h
-  xmsstamper/stamper/detail/XmGuideBankUtil.h
-  xmsstamper/stamper/detail/XmSlopedAbutmentUtil.h
-  xmsstamper/stamper/detail/XmStampEndCap.h
-  xmsstamper/stamper/detail/XmStamper3dPts.h
-  xmsstamper/stamper/detail/XmStampInterpCrossSection.h
-  xmsstamper/stamper/detail/XmStampInterpCrossSection.t.h
-  xmsstamper/stamper/detail/XmStampTests.t.h
-  xmsstamper/stamper/detail/XmUtil.h
+set(xmdf_headers
+  xmdf/xmdf/XmXmdf.h
+  xmdf/xmdf/XmXmdfIo.h
+  xmdf/xmdf/TutStamping.t.h
+  xmdf/xmdf/detail/XmBathymetryIntersector.h
+  xmdf/xmdf/detail/XmBathymetryIntersector.t.h
+  xmdf/xmdf/detail/XmBreaklines.h
+  xmdf/xmdf/detail/XmGuideBankUtil.h
+  xmdf/xmdf/detail/XmSlopedAbutmentUtil.h
+  xmdf/xmdf/detail/XmStampEndCap.h
+  xmdf/xmdf/detail/XmXmdf3dPts.h
+  xmdf/xmdf/detail/XmStampInterpCrossSection.h
+  xmdf/xmdf/detail/XmStampInterpCrossSection.t.h
+  xmdf/xmdf/detail/XmStampTests.t.h
+  xmdf/xmdf/detail/XmUtil.h
 )
 
 # Pybind11 sources
-set(xmsstamper_py
-  xmsstamper/python/xmsstamper_py.cpp
-  #Stamper
-  xmsstamper/python/stamper/stamper_py.cpp
-  xmsstamper/python/stamper/XmStamper_py.cpp
-  xmsstamper/python/stamper/XmStamperIo_py.cpp
+set(xmdf_py
+  xmdf/python/xmdf_py.cpp
+  #Xmdf
+  xmdf/python/xmdf/xmdf_py.cpp
+  xmdf/python/xmdf/XmXmdf_py.cpp
+  xmdf/python/xmdf/XmXmdfIo_py.cpp
 )
 
-set(xmsstamper_py_headers
-  xmsstamper/python/stamper/stamper_py.h
+set(xmdf_py_headers
+  xmdf/python/xmdf/xmdf_py.h
 )
 
 # Tests
@@ -96,8 +96,8 @@ if (BUILD_TESTING)
  add_definitions(-DXMSSTAMPER_TEST_PATH="${XMSSTAMPER_TEST_PATH}/")
  add_definitions(-DCXX_TEST -DCXXTEST4)
 
- list(APPEND xmsstamper_sources
-  xmsstamper/stamper/detail/XmUtil.t.h
+ list(APPEND xmdf_sources
+  xmdf/xmdf/detail/XmUtil.t.h
  )
 
  find_package(CxxTest)
@@ -106,7 +106,7 @@ if (BUILD_TESTING)
    enable_testing()
 
    set(CXXTEST_TESTGEN_ARGS --xunit-printer --have-eh)
-   file(GLOB_RECURSE test_headers ${CMAKE_CURRENT_LIST_DIR}/xmsstamper/*.t.h)
+   file(GLOB_RECURSE test_headers ${CMAKE_CURRENT_LIST_DIR}/xmdf/*.t.h)
       CXXTEST_ADD_TEST(
         runner runner.cpp ${test_headers}
       )
@@ -116,7 +116,7 @@ endif ()
 
 # Static library
 add_library(${PROJECT_NAME} STATIC
-  ${xmsstamper_sources} ${xmsstamper_headers}
+  ${xmdf_sources} ${xmdf_headers}
 )
 target_include_directories(${PROJECT_NAME}
   PUBLIC
@@ -163,20 +163,20 @@ if(IS_PYTHON_BUILD)
         include("${CONAN_PYBIND11_ROOT}/share/cmake/pybind11/pybind11Tools.cmake")
     endif()
 
-    pybind11_add_module(xmsstamper_py
-      ${xmsstamper_py} ${xmsstamper_py_headers}
+    pybind11_add_module(xmdf_py
+      ${xmdf_py} ${xmdf_py_headers}
     )
-    target_include_directories(xmsstamper_py
+    target_include_directories(xmdf_py
       PRIVATE
           ${EXT_LIBS}
           PYTHON_INCLUDE_DIRS
     )
-    target_link_libraries(xmsstamper_py
+    target_link_libraries(xmdf_py
     PRIVATE
       ${EXT_LIBS}
       ${PROJECT_NAME}
   )
-    set_target_properties(xmsstamper_py PROPERTIES
+    set_target_properties(xmdf_py PROPERTIES
     LINKER_LANGUAGE CXX
   )
 
@@ -184,7 +184,7 @@ if(IS_PYTHON_BUILD)
 
   # Install recipe
   install(
-      TARGETS xmsstamper_py
+      TARGETS xmdf_py
       ARCHIVE DESTINATION ${PYTHON_SITE_PACKAGES_TRIMMED}
       LIBRARY DESTINATION ${PYTHON_SITE_PACKAGES_TRIMMED}
   )
@@ -198,7 +198,7 @@ install(
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
 )
-foreach (header IN LISTS xmsstamper_headers xmsstamper_py_headers)
+foreach (header IN LISTS xmdf_headers xmdf_py_headers)
   get_filename_component(subdir "${header}" DIRECTORY)
   install(
     FILES "${header}"

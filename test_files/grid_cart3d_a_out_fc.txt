@@ -1,0 +1,41 @@
+File grid_cart3d_a_file_f.h5 opened.
+XMDF Version: 99.989998
+
+Coordinate System:
+Horizontal datum = State Plane NAD27 (US)
+Horizontal units = Horizontal units = US Survey Feet (=0)
+Vertical datum = Vertical datum = Local (=0)
+Vertical units = Vertical units = US Survey Feet (=0)
+SPC Zone = 3601
+
+
+Number of Scalars 0
+Number of Vectors 0
+Number of meshes in file: 0
+Paths:
+
+Number of grids in file: 1
+Paths:
+  Grid Cart3D Group
+
+Reading grid in group: Grid Cart3D Group
+The grid type is: Cartesian
+The grid is three-dimensional
+The grid origin is 10.000000 10.000000 0.000000
+The grid has a right hand orientation
+The grid bearing is 45.000000
+The grid Dip is 0.000000
+The grid Roll is 0.000000
+The grid Computational Origin is 8
+The grid U Direction is -2
+Number of cells in I 5
+Number of cells in J 5
+Number of cells in K 3
+The Coordinates in direction I:
+30.000000 60.000000 90.000000 120.000000 
+150.000000 
+The Coordinates in direction J:
+30.000000 60.000000 90.000000 120.000000 
+150.000000 
+The Coordinates in direction K:
+30.000000 60.000000 90.000000 

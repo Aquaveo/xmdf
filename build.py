@@ -35,7 +35,7 @@ if __name__ == "__main__":
                 or int(settings['compiler.version']) > 12) \
                 and settings['arch'] == "x86_64"):
             pybind_options = dict(options)
-            pybind_options.update({'xmsstamper:pybind': True})
+            pybind_options.update({'xmdf:pybind': True})
             pybind_updated_builds.append([settings, pybind_options, env_vars, build_requires])
 
         pybind_updated_builds.append([settings, options, env_vars, build_requires])
@@ -48,7 +48,7 @@ if __name__ == "__main__":
                 and 'MD' in settings['compiler.runtime'] \
                 and int(settings['compiler.version']) < 13:
             xms_options = dict(options)
-            xms_options.update({'xmsstamper:xms': True})
+            xms_options.update({'xmdf:xms': True})
             xms_updated_builds.append([settings, xms_options, env_vars, build_requires])
         xms_updated_builds.append([settings, options, env_vars, build_requires])
     builder.builds = xms_updated_builds
@@ -56,9 +56,9 @@ if __name__ == "__main__":
     testing_updated_builds = []
     for settings, options, env_vars, build_requires, reference in builder.items:
         # testing option
-        if not options.get('xmsstamper:xms', False) and not options.get('xmsstamper:pybind', False):
+        if not options.get('xmdf:xms', False) and not options.get('xmdf:pybind', False):
             testing_options = dict(options)
-            testing_options.update({'xmsstamper:testing': True})
+            testing_options.update({'xmdf:testing': True})
             testing_updated_builds.append([settings, testing_options, env_vars, build_requires])
         testing_updated_builds.append([settings, options, env_vars, build_requires])
     builder.builds = testing_updated_builds

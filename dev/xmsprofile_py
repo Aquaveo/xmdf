@@ -7,8 +7,8 @@ compiler=Visual Studio
 compiler.version=14
 build_type=Release
 [options]
-xmsstamper:xms=False
-xmsstamper:testing=False
-xmsstamper:pybind=True
+xmdf:xms=False
+xmdf:testing=False
+xmdf:pybind=True
 [build_requires]
 [env]

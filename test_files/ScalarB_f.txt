@@ -1,0 +1,60 @@
+ File ScalarB_f.h5 opened.
+ XMDF Version:    99.99000    
+ 
+ 
+ Coordinate System:
+ Horizontal datum = UTM
+ Horizontal units = Horizontal units = Meters (=2)
+ Vertical datum = Vertical datum = Local (=0)
+ Vertical units = Vertical units = Meters (=2)
+ UTM Zone =           60
+ 
+ 
+ Number of Scalars            1
+ Reading scalar: Datasets/Scalars/ScalarB
+ Time units: Hours
+ Units: mg/L
+ Number Timesteps:            3
+ Number Values:           10
+ Number Active:            8
+ 
+ Timestep at     1.50000000000000     
+ Min:    1.500000    
+ Max:    57.66504    
+ Values:
+   1.500000       2.250000       3.375000       5.062500       7.593750    
+   11.39062       17.08594       25.62891       38.44336       57.66504    
+ 
+ Activity:
+           1           1           1           1           1           0
+           1           1
+ 
+ Timestep at     3.00000000000000     
+ Min:    3.000000    
+ Max:    115.3301    
+ Values:
+   3.000000       4.500000       6.750000       10.12500       15.18750    
+   22.78125       34.17188       51.25781       76.88672       115.3301    
+ 
+ Activity:
+           1           1           1           1           1           0
+           1           1
+ 
+ Timestep at     4.50000000000000     
+ Min:    4.500000    
+ Max:    172.9951    
+ Values:
+   4.500000       6.750000       10.12500       15.18750       22.78125    
+   34.17188       51.25781       76.88672       115.3301       172.9951    
+ 
+ Activity:
+           1           1           1           1           1           0
+           1           1
+ 
+ Number of Vectors            0
+ Number of meshes in file:            0
+ Paths:
+ 
+ Number of grids in file:            0
+ Paths:
+ 
