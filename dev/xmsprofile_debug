@@ -7,8 +7,6 @@ compiler=Visual Studio
 compiler.version=14
 build_type=Debug
 [options]
-xmscore:xms=True
-xmsinterp:xms=True
 xmdf:testing=True
 [build_requires]
 [env]

@@ -9,6 +9,9 @@ set(XMDF_TEST_PATH "../test_files/" CACHE PATH "Path to test files for testing")
 
 project(xmdf C CXX)
 
+add_definitions(/DXMDF_EXPORTS)  # Export symbols
+add_definitions(/D_CRT_SECURE_NO_WARNINGS)  # suppress warnings
+
 if(WIN32)
     if(XMS_BUILD)
         add_definitions(/D _WIN32_WINNT=0x0501)  # Windows XP and higher
