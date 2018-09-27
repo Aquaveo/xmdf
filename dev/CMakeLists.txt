@@ -32,24 +32,24 @@ message("External Include Dirs: ${EXT_INCLUDE_DIRS}")
 message("External Lib Dirs: ${EXT_LIB_DIRS}")
 message("Extneral Libs: ${EXT_LIBS}")
 
-include_directories(${CMAKE_CURRENT_LIST_DIR})
+include_directories(${CMAKE_CURRENT_LIST_DIR}/..)
 include_directories(${EXT_INCLUDE_DIRS})
 link_directories(${EXT_LIB_DIRS})
 
 # Sources
 set(xmdf_sources
-	xmdf/xmdf/Xmdf.c
-	xmdf/xmdf/Xmdf_f.c
-	xmdf/xmdf/xmdf_private.c
-	xmdf/xmdf/xmdf_timestep.c
+	../xmdf/xmdf/Xmdf.c
+	../xmdf/xmdf/Xmdf_f.c
+	../xmdf/xmdf/xmdf_private.c
+	../xmdf/xmdf/xmdf_timestep.c
 )
 
 set(xmdf_headers
-  xmdf/xmdf/xmdf/ErrorDefinitions.h
-  xmdf/xmdf/xmdf/Xmdf.h
-  xmdf/xmdf/xmdf/Xmdf_f.h
-  xmdf/xmdf/xmdf/xmdf_private.h
-  xmdf/xmdf/xmdf/xmdf_timestep.h
+  ../xmdf/xmdf/xmdf/ErrorDefinitions.h
+  ../xmdf/xmdf/xmdf/Xmdf.h
+  ../xmdf/xmdf/xmdf/Xmdf_f.h
+  ../xmdf/xmdf/xmdf/xmdf_private.h
+  ../xmdf/xmdf/xmdf/xmdf_timestep.h
 )
 
 # Tests
