@@ -1,0 +1,60 @@
+ File ScalarA_f.h5 opened.
+ XMDF Version:    99.99000    
+ 
+ 
+ Coordinate System:
+ Horizontal datum = Geographic HPGN (US)
+ Horizontal units = Horizontal units = Meters (=2)
+ Vertical datum = Vertical datum = Local (=0)
+ Vertical units = Vertical units = Meters (=2)
+ HPGN Area =           29
+ 
+ 
+ Number of Scalars            1
+ Reading scalar: Datasets/Scalars/ScalarA
+ Time units: Hours
+ Units: mg/L
+ Number Timesteps:            3
+ Number Values:           10
+ Number Active:            8
+ 
+ Timestep at    0.500000000000000     
+ Min:   0.5000000    
+ Max:    1907.349    
+ Values:
+  0.5000000       1.250000       3.125000       7.812500       19.53125    
+   48.82812       122.0703       305.1758       762.9395       1907.349    
+ 
+ Activity:
+           1           1           1           1           1           0
+           1           1
+ 
+ Timestep at     1.00000000000000     
+ Min:    1.000000    
+ Max:    3814.697    
+ Values:
+   1.000000       2.500000       6.250000       15.62500       39.06250    
+   97.65625       244.1406       610.3516       1525.879       3814.697    
+ 
+ Activity:
+           1           1           1           1           1           0
+           1           1
+ 
+ Timestep at     1.50000000000000     
+ Min:    1.500000    
+ Max:    5722.046    
+ Values:
+   1.500000       3.750000       9.375000       23.43750       58.59375    
+   146.4844       366.2109       915.5273       2288.818       5722.046    
+ 
+ Activity:
+           1           1           1           1           1           0
+           1           1
+ 
+ Number of Vectors            0
+ Number of meshes in file:            0
+ Paths:
+ 
+ Number of grids in file:            0
+ Paths:
+ 

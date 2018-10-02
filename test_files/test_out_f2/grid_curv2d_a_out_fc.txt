@@ -1,0 +1,38 @@
+File grid_curv2d_a_file_f.h5 opened.
+XMDF Version: 99.989998
+
+Coordinate System:
+Horizontal datum = CPP (Carte Parallelo-Grammatique Projection)
+Horizontal units = Horizontal units = Meters (=2)
+Vertical datum = Vertical datum = Local (=0)
+Vertical units = Vertical units = Meters (=2)
+CPP Latitude = 56.000000
+CPP Longitude = 23.000000
+
+
+Number of Scalars 0
+Number of Vectors 0
+Number of meshes in file: 0
+Paths:
+
+Number of grids in file: 1
+Paths:
+  Grid Curv2D Group
+
+Reading grid in group: Grid Curv2D Group
+The grid type is: Curvilinear
+The grid is two-dimensional
+The grid has a right hand orientation
+The grid Computational Origin is 1
+The grid U Direction is 1
+Number of cells in I 2
+Number of cells in J 3
+The Coordinates in direction I:
+0.000000 7.500000 15.000000 2.500000 
+10.000000 17.500000 3.500000 11.000000 18.500000 
+0.000000 7.500000 -999.000000 
+The Coordinates in direction J:
+0.000000 0.000000 0.000000 10.000000 
+10.000000 10.000000 20.000000 20.000000 20.000000 
+30.000000 30.000000 -999.000000 
+

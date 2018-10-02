@@ -1,0 +1,15 @@
+Calendar conversion:
+
+Dates #1 & #2  were calculated with the same date:
+
+0 / 4706 / 4 / 10 / 0 / 0 / 0 --- Julian = 2655.500000
+
+0 / 4706 / 4 / 10 / 0 / 0 / 0 --- Julian = 2655.500000
+
+
+Dates #3 & #4  were calculated with the same date:
+
+1 / 2004 / 6 / 3 / 2 / 8 / 32 --- Julian = 2453159.589259
+
+1 / 2004 / 6 / 3 / 2 / 8 / 32 --- Julian = 2453159.589259
+

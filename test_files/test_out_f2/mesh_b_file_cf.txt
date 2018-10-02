@@ -1,0 +1,57 @@
+ File mesh_b_file_c.h5 opened.
+ XMDF Version:    99.99000    
+ 
+ 
+ Coordinate System:
+ Horizontal datum = Geographic
+ Horizontal units = Horizontal units = Meters (=2)
+ Vertical datum = Vertical datum = NGVD 88 (=2)
+ Vertical units = Vertical units = Meters (=2)
+   Latitude = South (=1)
+   Longitude = West (=1)
+ Ellipse =           21
+ 
+ 
+ Number of Scalars            0
+ Number of Vectors            0
+ Number of meshes in file:            1
+ Paths:
+ MeshB Group
+ 
+ Reading mesh in group: MeshB Group
+ Number of Elements:            2
+ Element Types:
+ Elem            1 , Type          210
+ Elem            2 , Type          200
+ Elem:            1  - 
+           1  
+           3  
+           4  
+           2  
+ 
+ Elem:            2  - 
+           2  
+           4  
+           5  
+ 
+ Node Locations:
+ Node:            1  Location:   0.000000000000000E+000  
+   5.00000000000000         0.000000000000000E+000
+ Node:            2  Location:    5.00000000000000       
+   5.00000000000000         0.000000000000000E+000
+ Node:            3  Location:   0.000000000000000E+000  
+  0.000000000000000E+000    0.000000000000000E+000
+ Node:            4  Location:    5.00000000000000       
+  0.000000000000000E+000    0.000000000000000E+000
+ Node:            5  Location:    7.50000000000000       
+   2.50000000000000         0.000000000000000E+000
+ 
+ String Property Type Read Correctly
+ Unsigned Integer Property Type Read Correctly
+ Integer Property Type Read Correctly
+ Double Property Type Read Correctly
+ Float Property Type Read Correctly
+ 
+ Number of grids in file:            0
+ Paths:
+ 
