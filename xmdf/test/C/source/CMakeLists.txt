@@ -11,6 +11,8 @@ include_directories(../include ../../../xmdf)
 link_directories(../../../../dev/build_cpp/lib ${CONAN_LIB_DIRS})
 SET( CMAKE_EXE_LINKER_FLAGS_DEBUG
   "${CMAKE_EXE_LINKER_FLAGS_DEBUG} /NODEFAULTLIB:LIBCMTD.lib" )
+SET( CMAKE_EXE_LINKER_FLAGS
+  "${CMAKE_EXE_LINKER_FLAGS_DEBUG} /NODEFAULTLIB:LIBCMT.lib" )
   
 set(CompilerFlags
 		CMAKE_CXX_FLAGS
@@ -38,4 +40,4 @@ add_executable(TestC
   TestTimestep.cpp
   TestXmdf.cpp
 )
-target_link_libraries(TestC xmdf_d.lib ${CONAN_LIBS})
+target_link_libraries(TestC xmdf.lib ${CONAN_LIBS})

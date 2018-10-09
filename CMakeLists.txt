@@ -61,7 +61,7 @@ if (BUILD_TESTING) # perhaps add CXXTEST that runs the c and Fortran tests and f
   # xmdf/xmdf/detail/XmUtil.t.h
  )
  
- add_subdirectory(xmdf/test/C/source dev/build_cpp/bin)
+ add_subdirectory(xmdf/test/C/source TestC)
 
 # install(
 #  TARGETS TestC
