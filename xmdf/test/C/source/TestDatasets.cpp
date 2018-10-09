@@ -1436,7 +1436,7 @@ int tdWriteVector2D_A_Pieces (LPCSTR a_Filename, int a_Compression)
       for (j = 0; j < nComponents; j++) {
         mag += pow((double)fValues[i*nComponents + j], 2.0);
       }
-      mag = sqrt(mag);
+      mag = sqrt((double)mag);
       minvalue = min(minvalue, mag);
       maxvalue = max(maxvalue, mag);
     }

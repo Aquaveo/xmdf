@@ -9,7 +9,7 @@ mkdir build_cpp
 pushd .
 cd build_cpp
 REM conan install -pr ..\xmsprofile_debug ..\.. --build missing
-conan install -pr ..\xmsprofile_debug ..\..
+conan install -pr ..\xmsprofile_debug ..\.. --build missing
 popd
 echo off
 
@@ -20,7 +20,7 @@ pause
 echo on
 pushd .
 cd build_cpp
-cmake .. -G"Visual Studio 12 2013 Win64" -DIS_PYTHON_BUILD=False -DBUILD_TESTING=True
+cmake ..\.. -G"Visual Studio 12 2013 Win64" -DIS_PYTHON_BUILD=False -DBUILD_TESTING=True
 popd
 echo off
 

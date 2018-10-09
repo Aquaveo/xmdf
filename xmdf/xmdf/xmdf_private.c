@@ -183,8 +183,8 @@ XMDF_API herr_t xfpHDF5ErrorWalk_cb (int n, H5E_error_t *err_desc,
        indent*2, "", err_desc->min_num, min_str);
   xfpAddXMDFError(error);
 
-  H5Eget_free(maj_str);
-  H5Eget_free(min_str);
+  free(maj_str);
+  free(min_str);
 
   return 0;
 } /* xfpHDF5ErrorWalk_cb */
