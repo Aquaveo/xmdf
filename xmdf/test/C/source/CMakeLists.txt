@@ -10,7 +10,7 @@ add_definitions(/D NO_XMDF_API)
 include_directories(../include ../../../xmdf)
 link_directories(../../../../dev/build_cpp/lib ${CONAN_LIB_DIRS})
 SET( CMAKE_EXE_LINKER_FLAGS_DEBUG
-  "${CMAKE_EXE_LINKER_FLAGS_DEBUG} /NODEFAULTLIB:MSVCRTD.lib" )
+  "${CMAKE_EXE_LINKER_FLAGS_DEBUG} /NODEFAULTLIB:LIBCMTD.lib" )
   
 set(CompilerFlags
 		CMAKE_CXX_FLAGS

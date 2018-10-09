@@ -38,7 +38,9 @@ class XmdfConan(ConanFile):
 
         # Use the dev version of XMSCore, XMSInterp, XMSGrid, XMSExtractor
         self.requires("hdf5/1.8.1@aquaveo/stable")
-
+        self.requires("bzip2/1.0.6@conan/stable")
+        self.requires("zlib/1.2.11@conan/stable")
+    
     def build(self):
         cmake = CMake(self)
 

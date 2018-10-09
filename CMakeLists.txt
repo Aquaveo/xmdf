@@ -82,9 +82,6 @@ target_include_directories(${PROJECT_NAME}
 find_package(Threads REQUIRED)
 target_link_libraries(${PROJECT_NAME}
   ${EXT_LIBS}
-  hdf5dx64.lib
-  szlibdx64.lib
-  zlibdx64.lib
 )
 target_link_libraries(${PROJECT_NAME}
   ${CMAKE_THREAD_LIBS_INIT}
