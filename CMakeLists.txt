@@ -53,15 +53,15 @@ set(xmdf_headers
 )
 
 # Tests
-if (BUILD_TESTING) # perhaps add CXXTEST that runs the c and Fortran tests and file comparisons
+if (BUILD_TESTING)
  add_definitions(-DXMDF_TEST_PATH="${XMDF_TEST_PATH}/")
- add_definitions(-DCXX_TEST -DCXXTEST4)
 
  list(APPEND xmdf_sources
   # xmdf/xmdf/detail/XmUtil.t.h
  )
  
  add_subdirectory(xmdf/test/C/source TestC)
+ add_dependencies(TestC ${PROJECT_NAME})
 
 # install(
 #  TARGETS TestC
@@ -100,6 +100,6 @@ foreach (header IN LISTS xmdf_headers)
   get_filename_component(subdir "${header}" DIRECTORY)
   install(
     FILES "${header}"
-    DESTINATION "include/${subdir}"
+    DESTINATION "include/xmdf/${subdir}"
   )
 endforeach ()

@@ -17,8 +17,9 @@ class XmdfConan(ConanFile):
     options = {
         "xms": [True, False],
         "testing": [True, False],
+        "shared": [True, False],
     }
-    default_options = "xms=False", "testing=False"
+    default_options = "xms=False", "testing=False", "shared=False"
     generators = "cmake"
     build_requires = "cxxtest/4.4@aquaveo/stable"
     exports = "CMakeLists.txt", "LICENSE", "test_files/*"
